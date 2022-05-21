@@ -1,0 +1,277 @@
+*{
+    /*removendo a margin e o padding padrão do browser e definindo que todos os braowsers irão se comportar com esse padrão*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Montserrat', Arial, Helvetica, sans-serif;
+    font-size:13px;
+    overflow-x: hidden;
+}
+
+header{
+    height: 100px;
+    background-color:#000;
+    color: #fff;
+}
+.container{
+    max-width: 1140px; /*Definindo a largura maxima do container*/
+    height: 100px;
+    margin: auto;/*centralizando o container*/
+    display:flex;
+    align-items: center;
+}
+
+.logo{
+    width: 240px;
+    /* background-color: #B28756; */
+    font-size: 15px;
+    /* color: #fff; */
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    color: #B28756;
+    /* text-shadow:-1px 0 #fff, 0 1px #fff,
+    1px 0 #fff, 0 -1px #fff; */
+}
+.menu{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu ul,
+.menu li{
+    list-style: none;
+}
+
+.menu ul{
+    display: flex;
+}
+.menu li a{
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    letter-spacing: 2px;
+}
+
+.menu li a:hover{
+    border-bottom: 3px solid #B28756;
+}
+.active a{
+    border-bottom: 3px solid #B28756;
+}
+
+.hero{
+    height:calc(100vh - 100px);
+    background-color: #333;
+    background-image:url('../img/imgHero.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.hero .text{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    color: #fff;
+    justify-content:center;
+    flex-direction: column;
+
+}
+
+.hero h1{
+    /* text-transform: uppercase; */
+    font-weight: bold;
+    font-size:40px;
+    text-shadow:-1px 0 #B28756, 0 1px #B28756,
+    1px 0 #B28756, 0 -1px #B28756;
+    
+}
+
+.hero h2{
+    text-transform: uppercase;
+    /* font-weight: bold; */
+    font-size:20px;
+    text-shadow:-1px 0 #000, 0 1px #000,
+    1px 0 #000, 0 -1px #000;
+    color:#B28756;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.hero a{
+    display: block;
+    background-color: #B28756;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 30px;
+    border-radius:25px;
+
+}
+
+.default{
+    /* width: 100vw; */
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    
+}
+
+.default .section-title {
+    font-size: 20px;
+    margin-bottom: 40px;
+    
+}
+
+.default .section-body {
+    max-width: 1140px;
+    margin: auto;
+    /* height: 100px; */
+    /* background-color: #CCC; */
+}
+
+.default.light{
+    background-color: #F7F7F7;
+    
+}
+.default.light .section-title,
+.default.light .section-body{
+    color: #000;
+}
+
+.default.dark{
+    background-color: #000;
+}
+.default.dark .section-title,
+.default.dark .section-body{
+    color: #FFF;
+}
+
+.section-aboutus{
+    display:flex;
+    margin-top: 30px;
+}
+
+.section-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-img img{
+    border-radius: 230px;
+    box-shadow:0px 2px 5px #333;
+}
+
+.section-aboutus--center{
+    flex: 1;
+}
+
+.section-aboutus--center p{
+    font-size:14px;
+    line-height: 25px;
+}
+.section-aboutus--center .icons img{
+    color: #B28756;
+    padding: 0px;
+    /* border: 1px solid red; */
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;  
+    justify-content: center;
+}
+
+.section-services{
+    display: flex;
+}
+.section-service{
+    flex:1;
+    text-align: center;
+    border-right: 1px solid #333;
+    padding:10px;
+}
+.section-service:first-child{
+    border-left: 1px solid #333;
+}
+.section-service h4{
+    margin-top:20px;
+    text-transform:uppercase;
+    font-size: 15px;
+}
+.section-service p{
+    margin-top:10px;
+    color: #B28756;
+    font-size: 13px;
+}
+
+.section-contact {
+    max-width:450px;
+    margin:auto;
+    text-align:center;
+}
+
+.section-contact input[type=text],
+.section-contact textarea {
+    display:block;
+    width:100%;
+    height:40px;
+    border:0;
+    background:transparent;
+    border-bottom:1px solid #CCC;
+    outline:0;
+    margin-top:10px;
+}
+.section-contact textarea {
+    height:100px;
+    resize:none;
+}
+.section-contact--split {
+    display:flex;
+}
+.section-contact--split input:first-child {
+    margin-right:20px;
+}
+.section-contact .button{
+    margin-top: 20px;
+    background-color: #B28756;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius:25px;
+    border:none;
+}
+
+footer {
+    background-color:#000;
+    padding:20px;
+}
+.footer--area {
+    max-width:1140px;
+    margin:auto;
+    color:#FFF;
+   
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom:30px;
+    
+}
